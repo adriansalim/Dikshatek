@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="Dota" customModuleProvider="target">
+            <connections>
+                <outlet property="collectionViewCategory" destination="UHu-Cg-SaZ" id="x36-Fm-5ai"/>
+                <outlet property="collectionViewList" destination="HPJ-CG-NYO" id="esT-C2-SyA"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="HPJ-CG-NYO">
+                    <rect key="frame" x="10" y="124" width="394" height="688"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="WZt-u5-PxL">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Kw-JR-Zca">
+                    <rect key="frame" x="0.0" y="812" width="414" height="40"/>
+                    <subviews>
+                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rectangle.grid.2x2.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="HtD-yh-YoB">
+                            <rect key="frame" x="381.5" y="11" width="22.5" height="17.5"/>
+                        </imageView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="a1R-hT-7xS">
+                            <rect key="frame" x="364" y="0.0" width="50" height="40"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="EDV-eB-79p"/>
+                            </constraints>
+                            <connections>
+                                <action selector="btnSort:" destination="-1" eventType="touchUpInside" id="kkL-Op-hGC"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="a1R-hT-7xS" secondAttribute="trailing" id="1kj-bC-XYT"/>
+                        <constraint firstItem="a1R-hT-7xS" firstAttribute="top" secondItem="7Kw-JR-Zca" secondAttribute="top" id="7SV-Eu-lWh"/>
+                        <constraint firstAttribute="bottom" secondItem="a1R-hT-7xS" secondAttribute="bottom" id="FKC-IH-BCv"/>
+                        <constraint firstAttribute="trailing" secondItem="HtD-yh-YoB" secondAttribute="trailing" constant="10" id="NyB-bd-Xsh"/>
+                        <constraint firstAttribute="bottom" secondItem="HtD-yh-YoB" secondAttribute="bottom" constant="10" id="SgM-Xr-eVA"/>
+                        <constraint firstAttribute="height" constant="40" id="ljh-lb-Lkh"/>
+                        <constraint firstItem="HtD-yh-YoB" firstAttribute="top" secondItem="7Kw-JR-Zca" secondAttribute="top" constant="10" id="sX1-Jb-vaD"/>
+                    </constraints>
+                </view>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="UHu-Cg-SaZ">
+                    <rect key="frame" x="10" y="54" width="394" height="60"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="60" id="UNA-cb-L60"/>
+                    </constraints>
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="NP7-Xf-mhF">
+                        <size key="itemSize" width="128" height="128"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UHu-Cg-SaZ" secondAttribute="trailing" constant="10" id="3Ga-OJ-yNC"/>
+                <constraint firstItem="UHu-Cg-SaZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="10" id="66p-2q-csb"/>
+                <constraint firstItem="UHu-Cg-SaZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="7hg-G3-7YM"/>
+                <constraint firstItem="HPJ-CG-NYO" firstAttribute="top" secondItem="UHu-Cg-SaZ" secondAttribute="bottom" constant="10" id="Acy-bG-CdL"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="7Kw-JR-Zca" secondAttribute="trailing" id="CKS-ga-6ma"/>
+                <constraint firstItem="7Kw-JR-Zca" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="LbK-Xl-JgJ"/>
+                <constraint firstItem="7Kw-JR-Zca" firstAttribute="top" secondItem="HPJ-CG-NYO" secondAttribute="bottom" id="YOk-Kw-Bzu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="7Kw-JR-Zca" secondAttribute="bottom" constant="10" id="axm-2b-RWi"/>
+                <constraint firstItem="HPJ-CG-NYO" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="10" id="hN9-eI-oTY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="HPJ-CG-NYO" secondAttribute="trailing" constant="10" id="myX-aM-che"/>
+            </constraints>
+            <point key="canvasLocation" x="-13.043478260869566" y="70.982142857142847"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="rectangle.grid.2x2.fill" catalog="system" width="128" height="99"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
